@@ -5,6 +5,6 @@
     "noEmit": true,
     "allowJs": true
   },
-  "include": [".eslintrc.cjs"],
+  "include": [".eslintrc.cjs", "next.config.js"],
   "exclude": ["node_modules"]
 }
