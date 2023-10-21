@@ -1,10 +1,17 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "types": ["@types/node"],
+    "types": ["@types/node", "jest"],
     "noEmit": true,
     "allowJs": true
   },
-  "include": [".eslintrc.cjs", "next.config.js"],
+  "include": [
+    ".eslintrc.cjs",
+    "next.config.js",
+    "jest.config.js",
+    "src/**/__tests__",
+    "src/**/__mocks__",
+    "src/**/setupTests.ts"
+  ],
   "exclude": ["node_modules"]
 }

@@ -1,10 +1,13 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: { browser: true, es2020: true, jest: true },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:import/typescript',
+    'plugin:jest/recommended',
+    'plugin:testing-library/react',
+    'plugin:jest-dom/recommended',
     'next/core-web-vitals',
     'prettier',
   ],
@@ -17,7 +20,13 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: [
+    '@typescript-eslint',
+    'jest',
+    'testing-library',
+    'jest-dom',
+    'prettier',
+  ],
   rules: {
     'import/no-unresolved': 'error',
     // "@typescript-eslint/no-explicit-any": "off",
@@ -48,6 +57,9 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'testing-library/prefer-explicit-assert': 'error',
+    'testing-library/prefer-presence-queries': 'error',
+    'testing-library/prefer-screen-queries': 'error',
   },
   settings: {
     'import/parsers': {
