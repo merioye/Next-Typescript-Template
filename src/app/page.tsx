@@ -37,6 +37,7 @@ export default function Home() {
           height={37}
           priority
         />
+        <p>{process.env.NEXT_PUBLIC_APP_TITLE}</p>
       </div>
 
       <div className={styles.grid}>
