@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true, jest: true },
+  env: { browser: true, es2020: true, jest: true, 'cypress/globals': true },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
@@ -8,6 +8,8 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:testing-library/react',
     'plugin:jest-dom/recommended',
+    'plugin:cypress/recommended',
+    'plugin:chai-friendly/recommended',
     'next/core-web-vitals',
     'prettier',
   ],
@@ -25,6 +27,7 @@ module.exports = {
     'jest',
     'testing-library',
     'jest-dom',
+    'cypress',
     'prettier',
   ],
   rules: {
@@ -60,6 +63,12 @@ module.exports = {
     'testing-library/prefer-explicit-assert': 'error',
     'testing-library/prefer-presence-queries': 'error',
     'testing-library/prefer-screen-queries': 'error',
+    'cypress/no-assigning-return-values': 'error',
+    'cypress/no-unnecessary-waiting': 'error',
+    'cypress/assertion-before-screenshot': 'warn',
+    'cypress/no-force': 'warn',
+    'cypress/no-async-tests': 'error',
+    'cypress/no-pause': 'error',
   },
   settings: {
     'import/parsers': {

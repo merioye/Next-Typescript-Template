@@ -6,8 +6,6 @@ module.exports = {
   testEnvironment: 'jsdom',
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
-  // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
   // An array of regexp pattern strings used to skip coverage collection
@@ -22,4 +20,5 @@ module.exports = {
   setupFilesAfterEnv: ['./src/setupTests.ts'],
   // The glob patterns Jest uses to detect test files
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
+  verbose: true,
 };
