@@ -4,3 +4,9 @@ build
 .next
 coverage
 logs
+cache
+.cache
+public
+CHANGELOG.md
+README.md
+package-lock.json
