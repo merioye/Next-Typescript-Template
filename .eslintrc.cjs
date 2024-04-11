@@ -40,6 +40,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'no-unused-vars': 'warn',
+    'jsx-a11y/tabindex-no-positive': 'off',
     camelcase: 'off',
     'spaced-comment': 'error',
     quotes: ['error', 'single'],
