@@ -3,7 +3,6 @@
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
 
 
 # Logs
@@ -142,7 +141,6 @@ dist
 
 
 # Editor directories and files
-.vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store

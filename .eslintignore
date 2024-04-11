@@ -4,3 +4,7 @@ build
 .next
 coverage
 logs
+next.config.js
+jest.config.js
+cypress.config.ts
+.eslintrc.cjs

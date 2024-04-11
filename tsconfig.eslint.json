@@ -1,19 +1,18 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "types": ["@types/node", "jest"],
-    "noEmit": true,
-    "allowJs": true
+    "types": ["@types/node", "jest", "cypress"]
   },
   "include": [
-    ".eslintrc.cjs",
-    "next.config.js",
-    "jest.config.js",
-    "src/**/__tests__",
-    "src/**/__mocks__",
-    "src/**/setupTests.ts",
-    "cypress/e2e",
-    "cypress.config.ts"
+    "src",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/__tests__",
+    "**/__mocks__",
+    "**/*.{spec,test}.ts",
+    "**/*.{spec,test}.tsx",
+    "**/setupTests.ts",
+    "cypress"
   ],
   "exclude": ["node_modules"]
 }

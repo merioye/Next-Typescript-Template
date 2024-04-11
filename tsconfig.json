@@ -1,54 +1,12 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["DOM", "DOM.Iterable", "ES2020"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "sourceMap": true,
-    "allowImportingTsExtensions": true,
-    "forceConsistentCasingInFileNames": true,
-    "composite": true,
-    "allowSyntheticDefaultImports": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@*": ["./src/*"]
-    },
-    "baseUrl": "./"
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "es2015",
-      "moduleResolution": "node"
-    }
-  },
-  "include": [
-    "src",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
+  "extends": "./tsconfig.base.json",
+  "include": ["src", "next-env.d.ts", ".next/types/**/*.ts"],
   "exclude": [
     "node_modules",
-    "src/**/__tests__",
-    "src/**/__mocks__",
-    "src/**/setupTests.ts"
+    "**/__tests__",
+    "**/__mocks__",
+    "**/*.{spec,test}.ts",
+    "**/*.{spec,test}.tsx",
+    "**/setupTests.ts"
   ]
 }
