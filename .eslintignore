@@ -11,3 +11,4 @@ cypress.config.ts
 public
 cache
 .cache
+next-env.d.ts
