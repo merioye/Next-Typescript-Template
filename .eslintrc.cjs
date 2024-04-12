@@ -1,13 +1,17 @@
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true, jest: true, 'cypress/globals': true },
+  env: {
+    browser: true,
+    es2020: true,
+    'vitest-globals/env': true,
+    'cypress/globals': true,
+  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:import/typescript',
-    'plugin:jest/recommended',
+    'plugin:vitest-globals/recommended',
     'plugin:testing-library/react',
-    'plugin:jest-dom/recommended',
     'plugin:cypress/recommended',
     'plugin:chai-friendly/recommended',
     'next/core-web-vitals',
@@ -15,7 +19,7 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: './tsconfig.eslint.json',
+    project: './tsconfig.json',
     tsconfigRootDir: __dirname,
     sourceType: 'module',
     ecmaFeatures: {
@@ -24,9 +28,8 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
-    'jest',
+    'vitest',
     'testing-library',
-    'jest-dom',
     'cypress',
     'prettier',
   ],
@@ -71,6 +74,14 @@ module.exports = {
     'cypress/no-async-tests': 'error',
     'cypress/no-pause': 'error',
   },
+  overrides: [
+    {
+      files: ['cypress/**'],
+      parserOptions: {
+        project: './cypress/tsconfig.json',
+      },
+    },
+  ],
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
@@ -80,6 +91,9 @@ module.exports = {
     },
     react: {
       version: 'detect',
+    },
+    vitest: {
+      typecheck: true,
     },
   },
 };

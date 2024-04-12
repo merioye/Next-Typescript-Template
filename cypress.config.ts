@@ -6,7 +6,10 @@ export default defineConfig({
   env: combinedEnv,
   e2e: {
     baseUrl: process.env.NEXT_PUBLIC_CLIENT_BASE_URL,
-    specPattern: 'cypress/e2e/**/*.e2e-spec.[tj]s?(x)',
+    specPattern: [
+      'cypress/e2e/**/*.e2e-spec.[tj]s?(x)',
+      'cypress/e2e/**/*.e2e-test.[tj]s?(x)',
+    ],
     retries: {
       runMode: 3,
     },

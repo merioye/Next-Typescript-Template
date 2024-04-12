@@ -6,6 +6,7 @@ coverage
 logs
 next.config.js
 jest.config.js
+vitest.config.mts
 cypress.config.ts
 .eslintrc.cjs
 public

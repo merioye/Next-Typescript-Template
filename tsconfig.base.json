@@ -33,11 +33,5 @@
       "@/*": ["./src/*"]
     },
     "baseUrl": "./"
-  },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "es2015",
-      "moduleResolution": "node"
-    }
   }
 }
