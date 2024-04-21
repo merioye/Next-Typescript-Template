@@ -18,7 +18,7 @@
     "test:cov": "vitest run --coverage"
   },
   "dependencies": {
-    "next": "^14.0.0",
+    "next": "^14.2.2",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -45,7 +45,10 @@
     "eslint-plugin-chai-friendly": "^0.7.2",
     "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-testing-library": "^6.1.0",
     "eslint-plugin-vitest": "^0.5.1",
     "eslint-plugin-vitest-globals": "^1.5.0",
